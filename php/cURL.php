@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => "https://bionic-reading1.p.rapidapi.com/convert",
+    CURLOPT_URL => "https://apitube.io/v1/sets/76521250",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
@@ -12,8 +12,7 @@ curl_setopt_array($curl, [
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
-        "key: SIGN-UP-FOR-KEY",
-        "content-type: application/x-www-form-urlencoded"
+//        "key: KEY"
     ],
 ]);
 
