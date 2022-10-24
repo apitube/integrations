@@ -1,0 +1,3 @@
+curl --request GET \
+	--url 'https://apitube.io/v1/sets/***ID_HERE***' \
+	--header 'X-ApiTube-Key: ***KEY***'

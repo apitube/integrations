@@ -1,0 +1,2 @@
+http GET 'https://apitube.io/v1/sets/***ID_HERE***' \
+	X-ApiTube-Key:***KEY***
