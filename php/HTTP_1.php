@@ -1,15 +1,11 @@
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://apitube.io/v1/sets/76521250');
+$request->setUrl('https://apitube.io/v1/sets/***ID_HERE***');
 $request->setMethod(HTTP_METH_GET);
 
-$request->setQueryData([
-    'currency_code' => 'HELLO'
-]);
-
 $request->setHeaders([
-    'key' => 'KEY'
+//     'key' => 'KEY'
 ]);
 
 try {
