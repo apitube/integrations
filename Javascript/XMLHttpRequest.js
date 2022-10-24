@@ -9,7 +9,7 @@ xhr.addEventListener("readystatechange", function () {
     }
 });
 
-xhr.open("GET", "https://apitube.io/v1/sets/***ID_HERE***?limit=250");
+xhr.open("GET", "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0");
 xhr.setRequestHeader("X-ApiTube-Key", "***KEY***");
 
 xhr.send(data);

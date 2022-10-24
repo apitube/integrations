@@ -6,7 +6,7 @@ let rql = new RapidQL({
 
 rql.query(`{
   Http.get(
-    url:"https://apitube.io/v1/sets/***ID_HERE***"
+    url:"https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0"
     headers : {
 "X-ApiTube-Key":"***KEY***"
     }
