@@ -1,6 +1,6 @@
 # Integrations for APITUBE
 
-#### See integrations below:
+#### See integrations in other languages(and frameworks) below:
 
 - [C](https://github.com/apitube/integrations/tree/master/C)
 - [C#](https://github.com/apitube/integrations/tree/master/C#)
