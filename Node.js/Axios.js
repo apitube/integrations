@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const options = {
     method: 'GET',
-    url: 'https://apitube.io/v1/sets/***ID_HERE***',
+    url: 'https://apitube.io/v1/news',
     params: {
         limit: '250',
         offset: '0'

@@ -2,7 +2,7 @@ const request = require('request');
 
 const options = {
     method: 'GET',
-    url: 'https://apitube.io/v1/sets/***ID_HERE***',
+    url: 'https://apitube.io/v1/news',
     qs: {
         limit: '250',
         offset: '0',

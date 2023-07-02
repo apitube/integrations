@@ -9,7 +9,7 @@ class MyController extends Controller
 {
 	public function makeRequest(Request $request)
 	{
-		$url = "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0";
+		$url = "https://apitube.io/v1/news?limit=250&offset=0";
 		$apiKey = "***KEY***";
 
 		$response = Http::withHeaders([

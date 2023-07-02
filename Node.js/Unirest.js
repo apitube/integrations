@@ -1,6 +1,6 @@
 const unirest = require("unirest");
 
-const req = unirest("GET", "https://apitube.io/v1/sets/***ID_HERE***");
+const req = unirest("GET", "https://apitube.io/v1/news");
 
 req.query({
     "limit": "250",

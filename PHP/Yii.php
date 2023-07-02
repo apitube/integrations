@@ -9,7 +9,7 @@ class MyController extends Controller
 {
 	public function actionMakeRequest()
 	{
-		$url = "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0";
+		$url = "https://apitube.io/v1/news?limit=250&offset=0";
 		$apiKey = "***KEY***";
 
 		$httpClient = new Client();

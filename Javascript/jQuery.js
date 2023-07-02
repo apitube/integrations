@@ -1,7 +1,7 @@
 const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0",
+    "url": "https://apitube.io/v1/news?limit=250&offset=0",
     "method": "GET",
     "headers": {
         "X-ApiTube-Key": "***KEY***"

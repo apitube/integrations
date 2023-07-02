@@ -1,7 +1,7 @@
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://apitube.io/v1/sets/***ID_HERE***');
+$request->setUrl('https://apitube.io/v1/news');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData([

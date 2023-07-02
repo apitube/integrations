@@ -1,5 +1,5 @@
 AsyncHttpClient client = new DefaultAsyncHttpClient();
-client.prepare("GET", "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0")
+client.prepare("GET", "https://apitube.io/v1/news?limit=250&offset=0")
 	.setHeader("X-ApiTube-Key", "***KEY***")
 	.execute()
 	.toCompletableFuture()

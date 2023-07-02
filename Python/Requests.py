@@ -1,6 +1,6 @@
 import requests
 
-url = "https://apitube.io/v1/sets/***ID_HERE***"
+url = "https://apitube.io/v1/news"
 
 querystring = {"limit":"250", "offset": "0"}
 

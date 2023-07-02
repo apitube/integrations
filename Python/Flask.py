@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def make_request():
-    url = "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0"
+    url = "https://apitube.io/v1/news?limit=250&offset=0"
     api_key = "***KEY***"
 
     headers = {

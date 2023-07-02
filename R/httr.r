@@ -1,6 +1,6 @@
 library(httr)
 
-url <- "https://apitube.io/v1/sets/***ID_HERE***"
+url <- "https://apitube.io/v1/news"
 
 queryString <- list(
   limit = "250",

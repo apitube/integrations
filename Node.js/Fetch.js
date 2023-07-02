@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = 'https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0';
+const url = 'https://apitube.io/v1/news?limit=250&offset=0';
 
 const options = {
     method: 'GET',

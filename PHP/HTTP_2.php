@@ -3,7 +3,7 @@
 $client = new http\Client;
 $request = new http\Client\Request;
 
-$request->setRequestUrl('https://apitube.io/v1/sets/***ID_HERE***');
+$request->setRequestUrl('https://apitube.io/v1/news');
 $request->setRequestMethod('GET');
 $request->setQuery(new http\QueryString([
     'limit' => '250',
