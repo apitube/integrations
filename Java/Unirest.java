@@ -1,3 +1,2 @@
-HttpResponse<String> response = Unirest.get("https://apitube.io/v1/news?limit=250&offset=0")
-	.header("X-ApiTube-Key", "***KEY***")
+HttpResponse<String> response = Unirest.get("https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY")
 	.asString();

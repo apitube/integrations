@@ -2,14 +2,10 @@ const request = require('request');
 
 const options = {
     method: 'GET',
-    url: 'https://apitube.io/v1/news',
+    url: 'https://api.apitube.io/v1/news/everything',
     qs: {
-        limit: '250',
-        offset: '0',
-    },
-    headers: {
-        // 'X-ApiTube-Key': '***KEY***',
-        useQueryString: true
+        limit: '50',
+        api_key: 'YOUR_API_KEY'
     }
 };
 

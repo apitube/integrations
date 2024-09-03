@@ -2,13 +2,10 @@ const axios = require("axios");
 
 const options = {
     method: 'GET',
-    url: 'https://apitube.io/v1/news',
+    url: 'https://api.apitube.io/v1/news/everything',
     params: {
-        limit: '250',
-        offset: '0'
-    },
-    headers: {
-        'X-ApiTube-Key': '***KEY***'
+        limit: '50',
+        api_key: 'YOUR_API_KEY'
     }
 };
 

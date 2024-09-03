@@ -1,9 +1,8 @@
 OkHttpClient client = new OkHttpClient();
 
 Request request = new Request.Builder()
-	.url("https://apitube.io/v1/news?limit=250&offset=0")
+	.url("https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY")
 	.get()
-	.addHeader("X-ApiTube-Key", "***KEY***")
 	.build();
 
 Response response = client.newCall(request).execute();

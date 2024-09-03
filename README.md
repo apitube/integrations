@@ -25,3 +25,12 @@
 - [Ruby](https://github.com/apitube/integrations/tree/master/Ruby)
 - [Shell](https://github.com/apitube/integrations/tree/master/Shell)
 - [Swift](https://github.com/apitube/integrations/tree/master/Swift)
+
+#### SDK:
+
+| Platform                                                                         | Maintained? | API Parity |
+|----------------------------------------------------------------------------------|-------------|------------|
+| [PHP SDK](https://github.com/apitube/integrations/tree/master/SDK/PHP-SDK)       | Yes         | Full       |
+| [Python SDK](https://github.com/apitube/integrations/tree/master/SDK/PHP-SDK)    | Yes         | Full       |
+| [Java SDK](https://github.com/apitube/integrations/tree/master/SDK/Java-SDK)     | Yes         | Full       |
+| [Golang SDK](https://github.com/apitube/integrations/tree/master/SDK/Golang-SDK) | Yes         | Full       |

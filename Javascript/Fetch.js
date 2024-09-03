@@ -1,11 +1,8 @@
 const options = {
-    method: 'GET',
-    headers: {
-        'X-ApiTube-Key': '***KEY***'
-    }
+    method: 'GET'
 };
 
-fetch('https://apitube.io/v1/news?limit=250&offset=0', options)
+fetch('https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));

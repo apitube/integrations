@@ -9,12 +9,9 @@ class MyController extends Controller
 {
 	public function makeRequest(Request $request)
 	{
-		$url = "https://apitube.io/v1/news?limit=250&offset=0";
-		$apiKey = "***KEY***";
+		$url = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY";
 
-		$response = Http::withHeaders([
-			"X-ApiTube-Key" => $apiKey,
-		])->get($url);
+		$response = Http::get($url);
 
 		if ($response->failed()) {
 			$errorMessage = $response->clientError()

@@ -1,13 +1,9 @@
 import requests
 
-url = "https://apitube.io/v1/news"
+url = "https://api.apitube.io/v1/news/everything"
 
-querystring = {"limit":"250", "offset": "0"}
+querystring = {"limit":"50", "api_key":"YOUR_API_KEY"}
 
-headers = {
-	"X-ApiTube-Key": "***KEY***"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
+response = requests.request("GET", url, params=querystring)
 
 print(response.text)

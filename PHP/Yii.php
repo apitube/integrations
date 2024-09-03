@@ -9,13 +9,11 @@ class MyController extends Controller
 {
 	public function actionMakeRequest()
 	{
-		$url = "https://apitube.io/v1/news?limit=250&offset=0";
-		$apiKey = "***KEY***";
+		$url = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY";
 
 		$httpClient = new Client();
 		$response = $httpClient->createRequest()
 			->setUrl($url)
-			->setHeaders(['X-ApiTube-Key' => $apiKey])
 			->send();
 
 		if ($response->isOk) {

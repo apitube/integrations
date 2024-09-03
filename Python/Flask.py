@@ -5,14 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def make_request():
-    url = "https://apitube.io/v1/news?limit=250&offset=0"
-    api_key = "***KEY***"
+    url = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY"
 
-    headers = {
-        "X-ApiTube-Key": api_key
-    }
-
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
 
     if response.status_code == 200:
         return response.text

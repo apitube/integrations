@@ -1,11 +1,8 @@
 const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://apitube.io/v1/news?limit=250&offset=0",
-    "method": "GET",
-    "headers": {
-        "X-ApiTube-Key": "***KEY***"
-    }
+    "url": "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY",
+    "method": "GET"
 };
 
 $.ajax(settings).done(function (response) {

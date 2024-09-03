@@ -9,15 +9,10 @@ class MyController
 {
 	public function makeRequest(): Response
 	{
-		$url = "https://apitube.io/v1/news?limit=250&offset=0";
-		$apiKey = "***KEY***";
+		$url = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY";
 
 		$httpClient = HttpClient::create();
-		$response = $httpClient->request('GET', $url, [
-			'headers' => [
-				'X-ApiTube-Key' => $apiKey,
-			],
-		]);
+		$response = $httpClient->request('GET', $url);
 
 		$statusCode = $response->getStatusCode();
 		$content = $response->getContent();
