@@ -4,7 +4,7 @@ async function fetchNews() {
     try {
         const response = await got('https://api.apitube.io/v1/news/everything', {
             searchParams: {
-                limit: 50,
+                per_page: 50,
                 api_key: 'YOUR_API_KEY'
             },
             responseType: 'json'

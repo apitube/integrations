@@ -7,7 +7,7 @@ conn = Faraday.new(url: 'https://api.apitube.io') do |f|
 end
 
 response = conn.get('/v1/news/everything', {
-  limit: 50,
+  per_page: 50,
   api_key: 'YOUR_API_KEY'
 })
 

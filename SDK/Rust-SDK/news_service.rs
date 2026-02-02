@@ -30,7 +30,7 @@ pub struct NewsResponse {
 
 #[derive(Debug, Clone, Default)]
 pub struct NewsQueryParams {
-    pub limit: Option<u32>,
+    pub per_page: Option<u32>,
     pub offset: Option<u32>,
     pub language: Option<String>,
     pub categories: Option<String>,
@@ -44,8 +44,8 @@ impl NewsQueryParams {
         Self::default()
     }
 
-    pub fn limit(mut self, limit: u32) -> Self {
-        self.limit = Some(limit);
+    pub fn per_page(mut self, per_page: u32) -> Self {
+        self.per_page = Some(per_page);
         self
     }
 
@@ -67,8 +67,8 @@ impl NewsQueryParams {
     fn to_params(&self) -> HashMap<String, String> {
         let mut params = HashMap::new();
 
-        if let Some(limit) = self.limit {
-            params.insert("limit".to_string(), limit.to_string());
+        if let Some(per_page) = self.per_page {
+            params.insert("per_page".to_string(), per_page.to_string());
         }
         if let Some(offset) = self.offset {
             params.insert("offset".to_string(), offset.to_string());

@@ -6,7 +6,7 @@ Future<void> main() async {
 
   try {
     final uri = Uri.parse(
-      'https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY',
+      'https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY',
     );
 
     final request = await client.getUrl(uri);

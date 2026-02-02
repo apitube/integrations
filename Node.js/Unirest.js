@@ -3,7 +3,7 @@ const unirest = require("unirest");
 const req = unirest("GET", "https://api.apitube.io/v1/news/everything");
 
 req.query({
-    "limit": "50",
+    "per_page": "50",
     "api_key": "YOUR_API_KEY"
 });
 

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY")
+	resp, err := http.Get("https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY")
 	if err != nil {
 		log.Fatalf("Error: %v", err)
 	}

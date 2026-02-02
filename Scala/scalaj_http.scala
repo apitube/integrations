@@ -2,7 +2,7 @@ import scalaj.http._
 
 object ApiTubeScalajHttp extends App {
   val response = Http("https://api.apitube.io/v1/news/everything")
-    .param("limit", "50")
+    .param("per_page", "50")
     .param("api_key", "YOUR_API_KEY")
     .asString
 

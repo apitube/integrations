@@ -8,7 +8,7 @@ defmodule ApiTube.Finch do
     # Finch.start_link(name: ApiTubeFinch)
 
     url = "https://api.apitube.io/v1/news/everything"
-    params = URI.encode_query(%{limit: 50, api_key: "YOUR_API_KEY"})
+    params = URI.encode_query(%{per_page: 50, api_key: "YOUR_API_KEY"})
 
     request = Finch.build(:get, "#{url}?#{params}")
 

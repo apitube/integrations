@@ -1,5 +1,5 @@
 HttpRequest request = HttpRequest.newBuilder()
-		.uri(URI.create("https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY"))
+		.uri(URI.create("https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY"))
 		.method("GET", HttpRequest.BodyPublishers.noBody())
 		.build();
 HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());

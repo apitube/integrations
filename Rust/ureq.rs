@@ -2,7 +2,7 @@ use ureq;
 
 fn main() -> Result<(), ureq::Error> {
     let response = ureq::get("https://api.apitube.io/v1/news/everything")
-        .query("limit", "50")
+        .query("per_page", "50")
         .query("api_key", "YOUR_API_KEY")
         .call()?;
 

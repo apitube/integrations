@@ -10,9 +10,9 @@ defmodule ApiTube.Tesla do
   plug Tesla.Middleware.Query, api_key: "YOUR_API_KEY"
 
   def fetch_news(opts \\ []) do
-    limit = Keyword.get(opts, :limit, 50)
+    per_page = Keyword.get(opts, :per_page, 50)
 
-    case get("/everything", query: [limit: limit]) do
+    case get("/everything", query: [per_page: per_page]) do
       {:ok, %Tesla.Env{status: 200, body: body}} ->
         {:ok, body}
 
@@ -26,7 +26,7 @@ defmodule ApiTube.Tesla do
 end
 
 # Usage example
-case ApiTube.Tesla.fetch_news(limit: 50) do
+case ApiTube.Tesla.fetch_news(per_page: 50) do
   {:ok, data} -> IO.inspect(data, pretty: true)
   {:error, message} -> IO.puts(message)
 end

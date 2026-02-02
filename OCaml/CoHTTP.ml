@@ -2,7 +2,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *urlString = @"https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY";
+        NSString *urlString = @"https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY";
         NSURL *url = [NSURL URLWithString:urlString];
 
         NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url

@@ -5,7 +5,7 @@ def fetch_news_sync():
     """Synchronous example using httpx"""
     url = "https://api.apitube.io/v1/news/everything"
     params = {
-        "limit": 50,
+        "per_page": 50,
         "api_key": "YOUR_API_KEY"
     }
 
@@ -22,7 +22,7 @@ async def fetch_news_async():
     """Asynchronous example using httpx"""
     url = "https://api.apitube.io/v1/news/everything"
     params = {
-        "limit": 50,
+        "per_page": 50,
         "api_key": "YOUR_API_KEY"
     }
 

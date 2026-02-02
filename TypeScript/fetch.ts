@@ -12,7 +12,7 @@ interface Article {
 
 async function fetchNews(): Promise<void> {
     const params = new URLSearchParams({
-        limit: '50',
+        per_page: '50',
         api_key: 'YOUR_API_KEY'
     });
 

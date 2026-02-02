@@ -4,7 +4,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         NSString *url = @"https://api.apitube.io/v1/news/everything";
-        NSDictionary *parameters = @{@"limit": @"50", @"api_key": @"YOUR_API_KEY"};
+        NSDictionary *parameters = @{@"per_page": @"50", @"api_key": @"YOUR_API_KEY"};
 
         [manager GET:url parameters:parameters headers:nil progress:nil
             success:^(NSURLSessionTask *task, id responseObject) {

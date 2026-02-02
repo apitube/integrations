@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY",
+	CURLOPT_URL => "https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",

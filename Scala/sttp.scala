@@ -4,7 +4,7 @@ object ApiTubeSttp extends App {
   val backend = HttpClientSyncBackend()
 
   val request = basicRequest
-    .get(uri"https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY")
+    .get(uri"https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY")
 
   val response = request.send(backend)
 
