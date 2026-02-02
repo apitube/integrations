@@ -2,7 +2,7 @@ const { request } = require('undici');
 
 async function fetchNews() {
     const url = new URL('https://api.apitube.io/v1/news/everything');
-    url.searchParams.append('limit', '50');
+    url.searchParams.append('per_page', '50');
     url.searchParams.append('api_key', 'YOUR_API_KEY');
 
     try {

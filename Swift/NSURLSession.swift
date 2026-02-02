@@ -1,6 +1,6 @@
 import Foundation
 
-let request = NSMutableURLRequest(url: NSURL(string: "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY")! as URL,
+let request = NSMutableURLRequest(url: NSURL(string: "https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY")! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: 10.0)
 request.httpMethod = "GET"

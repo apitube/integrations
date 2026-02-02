@@ -5,7 +5,7 @@ defmodule ApiTube.HTTPoison do
 
   def fetch_news do
     url = "https://api.apitube.io/v1/news/everything"
-    params = URI.encode_query(%{limit: 50, api_key: "YOUR_API_KEY"})
+    params = URI.encode_query(%{per_page: 50, api_key: "YOUR_API_KEY"})
 
     case HTTPoison.get("#{url}?#{params}") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->

@@ -21,7 +21,7 @@ export interface NewsResponse {
 }
 
 export interface NewsQueryParams {
-    limit?: number;
+    per_page?: number;
     offset?: number;
     language?: string;
     categories?: string;

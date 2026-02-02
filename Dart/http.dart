@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 Future<void> main() async {
   final uri = Uri.parse('https://api.apitube.io/v1/news/everything').replace(
     queryParameters: {
-      'limit': '50',
+      'per_page': '50',
       'api_key': 'YOUR_API_KEY',
     },
   );

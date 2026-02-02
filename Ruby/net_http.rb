@@ -3,7 +3,7 @@ require 'uri'
 require 'json'
 
 uri = URI.parse('https://api.apitube.io/v1/news/everything')
-params = { limit: 50, api_key: 'YOUR_API_KEY' }
+params = { per_page: 50, api_key: 'YOUR_API_KEY' }
 uri.query = URI.encode_www_form(params)
 
 http = Net::HTTP.new(uri.host, uri.port)

@@ -8,7 +8,7 @@ Future<void> main() async {
     final response = await dio.get(
       'https://api.apitube.io/v1/news/everything',
       queryParameters: {
-        'limit': 50,
+        'per_page': 50,
         'api_key': 'YOUR_API_KEY',
       },
     );

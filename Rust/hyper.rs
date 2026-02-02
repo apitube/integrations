@@ -7,7 +7,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let https = HttpsConnector::new();
     let client = Client::builder().build::<_, hyper::Body>(https);
 
-    let uri: Uri = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY"
+    let uri: Uri = "https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY"
         .parse()?;
 
     let response = client.get(uri).await?;

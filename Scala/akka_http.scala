@@ -11,7 +11,7 @@ object ApiTubeAkkaHttp extends App {
   implicit val materializer: Materializer = Materializer(system)
   implicit val executionContext: ExecutionContext = system.dispatcher
 
-  val url = "https://api.apitube.io/v1/news/everything?limit=50&api_key=YOUR_API_KEY"
+  val url = "https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY"
 
   val responseFuture: Future[HttpResponse] = Http().singleRequest(HttpRequest(uri = url))
 

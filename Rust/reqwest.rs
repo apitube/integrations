@@ -6,7 +6,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let response = client
         .get("https://api.apitube.io/v1/news/everything")
-        .query(&[("limit", "50"), ("api_key", "YOUR_API_KEY")])
+        .query(&[("per_page", "50"), ("api_key", "YOUR_API_KEY")])
         .send()?;
 
     if response.status().is_success() {
