@@ -1,15 +1,21 @@
-require 'uri'
 require 'net/http'
-require 'openssl'
+require 'uri'
+require 'json'
 
-url = URI("https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0")
+uri = URI.parse('https://api.apitube.io/v1/news/everything')
+params = { per_page: 50, api_key: 'YOUR_API_KEY' }
+uri.query = URI.encode_www_form(params)
 
-http = Net::HTTP.new(url.host, url.port)
+http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-request = Net::HTTP::Get.new(url)
-request["X-ApiTube-Key"] = '***KEY***'
+request = Net::HTTP::Get.new(uri.request_uri)
 
 response = http.request(request)
-puts response.read_body
+
+if response.code.to_i == 200
+  data = JSON.parse(response.body)
+  puts JSON.pretty_generate(data)
+else
+  puts "HTTP Request Error: #{response.code}"
+end

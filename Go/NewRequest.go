@@ -2,24 +2,22 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"io/ioutil"
+	"log"
+	"net/http"
 )
 
 func main() {
+	resp, err := http.Get("https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY")
+	if err != nil {
+		log.Fatalf("Error: %v", err)
+	}
+	defer resp.Body.Close()
 
-	url := "https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0"
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalf("Error: %v", err)
+	}
 
-	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("X-ApiTube-Key", "***KEY***")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
 	fmt.Println(string(body))
-
 }

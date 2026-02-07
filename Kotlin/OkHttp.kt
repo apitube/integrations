@@ -1,9 +1,8 @@
 val client = OkHttpClient()
 
 val request = Request.Builder()
-	.url("https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0")
+	.url("https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY")
 	.get()
-	.addHeader("X-ApiTube-Key", "***KEY***")
 	.build()
 
 val response = client.newCall(request).execute()

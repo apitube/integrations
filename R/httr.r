@@ -1,12 +1,11 @@
 library(httr)
 
-url <- "https://apitube.io/v1/sets/***ID_HERE***"
+url <- "https://api.apitube.io/v1/news/everything"
+response <- GET(url, query = list(per_page = 50, api_key = "YOUR_API_KEY"))
 
-queryString <- list(
-  limit = "250",
-  offset = "0"
-)
-
-response <- VERB("GET", url, add_headers('X-ApiTube-Key' = '***KEY***'), query = queryString, content_type("application/octet-stream"))
-
-content(response, "text")
+if (status_code(response) == 200) {
+  content <- content(response, "text")
+  print(content)
+} else {
+  print(paste("Error:", status_code(response)))
+}

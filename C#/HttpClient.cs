@@ -1,16 +1,22 @@
-var client = new HttpClient();
-var request = new HttpRequestMessage
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+class Program
 {
-	Method = HttpMethod.Get,
-	RequestUri = new Uri("https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0"),
-	Headers =
-	{
-		{ "X-ApiTube-Key", "***KEY***" },
-	},
-};
-using (var response = await client.SendAsync(request))
-{
-	response.EnsureSuccessStatusCode();
-	var body = await response.Content.ReadAsStringAsync();
-	Console.WriteLine(body);
+    static async Task Main(string[] args)
+    {
+        HttpClient client = new HttpClient();
+        var response = await client.GetAsync("https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY");
+
+        if (response.IsSuccessStatusCode)
+        {
+            string responseBody = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(responseBody);
+        }
+        else
+        {
+            Console.WriteLine($"Error: {response.StatusCode}");
+        }
+    }
 }

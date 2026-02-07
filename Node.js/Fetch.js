@@ -1,12 +1,9 @@
 const fetch = require('node-fetch');
 
-const url = 'https://apitube.io/v1/sets/***ID_HERE***?limit=250&offset=0';
+const url = 'https://api.apitube.io/v1/news/everything?per_page=50&api_key=YOUR_API_KEY';
 
 const options = {
-    method: 'GET',
-    headers: {
-        'X-ApiTube-Key': '***KEY***'
-    }
+    method: 'GET'
 };
 
 fetch(url, options)
